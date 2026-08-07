@@ -13,7 +13,7 @@ https://personal-website-git-v10-original-ujjal-sigdels-projects.vercel.app/
 
 ### Latest Version
 **Current Portfolio**
-https://your-domain.com
+https://www.ujjalsigdel.com.np
 
 ---
 
@@ -52,7 +52,7 @@ git clone https://github.com/ujjalsigdel/Personal-Website.git
 Switch to this branch
 
 ```bash
-git checkout v1.0
+git checkout v1.0-original
 ```
 
 Install dependencies
@@ -101,4 +101,4 @@ Comparing this version with the latest release highlights improvements in:
 GitHub: https://github.com/ujjalsigdel
 
 Current Portfolio:
-https://your-domain.com
+https://www.ujjalsigdel.com.np
