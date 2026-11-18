@@ -1,6 +1,8 @@
 {
-  // Keep other configurations like name, main, etc.
+  "name": "personal-website",
+  "compatibility_date": "2026-11-18",
   "assets": {
+    "directory": "dist/public",
     "not_found_handling": "single-page-application"
   }
 }
