@@ -1,7 +1,6 @@
 {
-  // ... other config like "name" and "main"
+  // Keep other configurations like name, main, etc.
   "assets": {
-    "directory": "../dist/public",
     "not_found_handling": "single-page-application"
   }
 }
