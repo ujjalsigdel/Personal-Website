@@ -1,8 +1,13 @@
 {
   "name": "personal-website",
   "compatibility_date": "2026-11-18",
+  "main": "api/contact.ts", 
   "assets": {
     "directory": "dist/public",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "EMAIL_FROM": "onboarding@resend.dev"
   }
 }
