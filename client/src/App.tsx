@@ -42,6 +42,7 @@ function App() {
         <Router />
         <Toaster />
       </MotionConfig>
+      <Analytics />
     </LazyMotion>
   );
 }
