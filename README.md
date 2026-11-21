@@ -1,115 +1,71 @@
-# Ujjal Sigdel - Personal Portfolio Website
+# Ujjal Sigdel - Personal Portfolio Website (Foundation)
+
+## 🔗 Live Links
+- **Current Production (Vercel)**: [https://www.ujjalsigdel.com.np](https://www.ujjalsigdel.com.np)
+- **Cloudflare Workers Preview**: [https://personal-website.ujjalsigdel.workers.dev/](https://personal-website.ujjalsigdel.workers.dev/)
+- **v1.0 Original Archive**: [View the first version of this portfolio](https://personal-website-git-v10-original-ujjal-sigdels-projects.vercel.app/)
 
 ## Overview
 
-This repository contains the source code for my personal portfolio website.
+This repository contains the source code for my personal portfolio website. It is treated as a long-term software project rather than a one-time portfolio, intended to evolve continuously throughout my academic and professional career.
 
-Website:
-https://www.ujjalsigdel.com.np
+**How this repository is organized:** engineering and visual design are deliberately separated. 
 
-The goal of this project is to showcase my technical skills, projects, achievements, experience, and professional growth.
+The branch you are looking at, `main`, is the **engineering foundation** — it is **not** the production portfolio and renders only a placeholder page. The current visual implementations live on the `redesign` and `redesign-cloudflare` branches. `main` exists so that future redesigns inherit the engineering (backend, accessibility, SEO, performance, tooling, AI context) without inheriting a specific visual identity.
 
-This repository is intended to evolve continuously throughout my academic and professional career. It is treated as a long-term software project rather than a one-time portfolio.
+---
 
-**How this repository is organized:** engineering and visual design are
-deliberately separated. The branch you are probably looking at, `main`, is
-the engineering foundation — it is **not** the production portfolio and
-renders only a placeholder page. The current visual implementation lives on
-the `redesign` branch; `main` exists so that future redesigns inherit the
-engineering (backend, accessibility, SEO, performance, tooling) without
-inheriting a visual identity. See the Branch Model section below and
-`FOUNDATION.md`.
+## Branch Model
+
+This repository uses a **Foundation / Design Branch** model. Changes flow one way: `main` → design branches.
+
+- **`main`**: The design-blind engineering foundation (shared configuration, backend logic, AI context). This is the branch you are currently on.
+- **`redesign`**: The primary production visual implementation deployed to **Vercel** (Node.js + Nodemailer).
+- **`redesign-cloudflare`**: The parallel deployment configured for **Cloudflare Workers** (using Resend for email).
+- **`v1.0-original`**: Frozen archive of the first version of the site.
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-
 - React
 - TypeScript
 - Vite
 - Tailwind CSS
 - Framer Motion
 
-### Backend
-
-- Node.js
-- Vercel Serverless Functions
-- Nodemailer
-
-### Deployment
-
-- Vercel
-
-### Version Control
-
-- Git
-- GitHub
-
----
-
-## Current Features
-
-- Responsive design
-- Contact form
-- Email delivery
-- Downloadable CV
-- Featured projects showcase
-- Full project archive with category filtering (`/projects`)
-- Skills section
-- Smooth animations
+### Backend & Deployment
+- **Vercel**: Node.js Serverless Functions + Nodemailer (on the `redesign` branch).
+- **Cloudflare**: Workers Runtime + Resend HTTP API (on the `redesign-cloudflare` branch).
 
 ---
 
 ## Local Development
 
-Install dependencies
+*Note: `npm run dev` on `main` serves the foundation's placeholder page. To see the production site locally, check out the `redesign` branch.*
 
+Install dependencies:
 ```bash
 npm install
 ```
 
-Run development server
-
+Run development server:
 ```bash
 npm run dev
 ```
 
-Build production version
-
+Build production version:
 ```bash
 npm run build
 ```
 
 ---
 
-## Branch Model
-
-- `main` — the engineering foundation, not the website: backend, shared
-  logic and configuration, design-system primitives, the theme contract,
-  and content (see FOUNDATION.md). Changes flow one way,
-  `main` → design branches.
-- `redesign` — the current production design. It predates the foundation
-  contract and is intentionally preserved as-is (see ARCHITECTURE.md).
-- `v1.0-original` — frozen archive of the first version of the site.
-
-Future redesigns branch from `main`, never from `redesign`.
-
-Note: `npm run dev` on `main` serves the foundation's placeholder page.
-To see the current production site locally, check out `redesign`.
-
----
-
 ## Documentation
 
-Project documentation is stored in:
-
-- FOUNDATION.md
-- VISION.md
-- ARCHITECTURE.md
-- WORKFLOW.md
-- ROADMAP.md
-- CHANGELOG.md
+Project documentation and AI agent context are stored in the `.claude/` directory:
+- `.claude/CLAUDE.md` — AI agent instructions, design philosophy, and workflow rules.
+- `.claude/FOUNDATION.md` — Architectural contract and layer boundaries.
 
 These files should be read before making significant architectural or design changes.
