@@ -7,3 +7,4 @@ vite.config.ts.*
 .env
 .dev.vars
 .vercel
+attached_assets
